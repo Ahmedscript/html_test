@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>HTML TEST</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+      <script src="js/test.js"></script>
+   </head>
+   <style>
+       *{
+           padding: 0;
+           margin: 0;
+           box-sizing: border-box;
+           outline: none !important;
+       }
+       .qweqweqw{
+        display: flex;
+    flex-wrap: wrap;
+       }
+       .Ckaskd{
+        width: 66%;
+    margin: 10px auto;
+    border: 1px solid #3333332f;
+    padding: 10px;
+       }
+       .Ckaskd img{
+           width: 100%;
+       }
+       .Ckaskd span{
+           display: flex;
+           width: 100%;
+           flex-wrap: wrap;
+       }
+       .Ckaskd button{
+           border: 0px solid transparent;
+           padding: 5px;
+           width: 45%;
+           margin: 5px;
+           display: block !important;
+           text-align: center;
+           background: #333;
+           color: white;
+           font-size: 15px;
+       }
+       .Ckaskd label{
+           width: 20%;
+       }
+       .Ckaskd input{
+           width: 80%;
+           margin: 15px 0px;
+       }
+       .Ckaskd button span{
+           text-align: center;
+           display: block;
+           width: 100%;
+       }
+       .sbmtArea{
+           margin: 20px 0px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+       }
+       .sbmtArea button ,.sbmtArea input{
+        border: 0px solid transparent;
+           padding: 5px 25px;
+           font-size: 20px;
+           margin: 0px 10px;
+           background: #333;
+           color: white;
+       }
+       h1{
+           font-family: cursive;
+           margin: 20px 0px 10px 0px;
+       }
+   </style>
+   <body>
+    <div class="main_result_div" id="main_result_div">
+        <center>
+           <h1 id="risult_heading"></h1>
+           <h1>Test by Ahmed</h3>
+        </center>
+     </div>
+      <div class="main_father_div" id="main_father_div">
+         <form  onsubmit="return test()">
+            <!--first div-->
+            <div class="three_child_div div_1" id="three_child_div">
+                <script>
+                   function countDown(secs,elem){
+                       var element = document.getElementById(elem);
+                       element.innerHTML = "complete your test in  ("+ secs + ") second";
+                       element.style.color = "#333";
+                       if(secs > 300){
+                           clearTimeout(timer);
+                           document.getElementById('status').display = "none";
+                           var main_father_div = document.getElementById('main_father_div').style.display = "none";
+                               document.getElementById('submit').style.display = "none";
+                               document.getElementById('result_div').style.display = "none";
+                               document.getElementById('main_result_div').style.display = "block";
+                               var risult_heading = document.getElementById('risult_heading');
+                   var obtained_marks = all_Marks;
+                   var total_marks = 100;
+                   var percentage = all_Marks/total_marks*100;
+                   if(percentage < 50){
+                   risult_heading.innerHTML ="FAIL"+" "+percentage + "%";
+                   }
+                   else if(percentage > 50){
+                   risult_heading.innerHTML ="PASS"+" "+percentage + "%";
+                   }
+                   return false
+                       }
+                       secs++;
+                       var timer = setTimeout('countDown('+secs+',"'+elem+'")',1000);
+                   }
+                </script>
+                <div id="status"> asdasdas</div>
+                <script>
+                   countDown(0,"status");
+                </script>
+            </div>
+               <div class="qweqweqw">
+                  <!--1-->
+                 <div class="Ckaskd">
+                    <P>HTML stands for?</P>
+                    <label>Answer :</label>
+                    <input class="same_inputs" id="input_1">
+                    <!-- <div>
+                       <img src="img/sptn6.png" alt="">
+                    </div>
+                      -->
+                     
+                    <span><button onclick="return putIn_1()">a. <span id="putBtn_1">HighText Machine Language</span></button>  
+                    <button onclick="return putIn_2()">b. <span id="putBtn_2">HyperText and links Markup Language</span></button>  
+                    <button onclick="return putIn_3()">c. <span id="putBtn_3">HyperText Markup Language</span></button>
+                    <button onclick="return putIn_11()">c. <span id="putBtn_12345">None of these</span></button>
+                    </span>
+                     
+                    <span id="span_1"></span>
+                    <!--/1-->
+                    <script>
+                       function putIn_1(){
+                       var a = document.getElementById('putBtn_1').innerHTML;
+                               
+                       document.getElementById('input_1').value = a;
+                           return false;
+                       }
+                       function putIn_2(){
+                       var a = document.getElementById('putBtn_2').innerHTML;
+                               
+                       document.getElementById('input_1').value = a;
+                           return false;
+                       }
+                       function putIn_3(){
+                       var a = document.getElementById('putBtn_3').innerHTML;
+                               
+                       document.getElementById('input_1').value = a;
+                           return false;
+                       }
+                       function putIn_11(){
+                       var a = document.getElementById('putBtn_12345').innerHTML;
+                               
+                       document.getElementById('input_1').value = a;
+                           return false;
+                       }
+                    </script>
+                 </div>
+                  <!--2-->
+                 <div class="Ckaskd">
+                    <P>The correct sequence of HTML tags for starting a webpage is ?</P>
+                    <label>Answer :</label>
+                    <input class="same_inputs" id="input_2">
+                    <!-- <div>
+                       <img src="img/sptn6.png" alt="">
+                    </div>
+                      -->
+                     
+                    <span><button onclick="return putIn_4()">a. <span id="putBtn_4">Head, Title, HTML, body</span></button>  
+                    <button onclick="return putIn_5()">b. <span id="putBtn_5">HTML, Body, Title, Head</span></button>  
+                    <button onclick="return putIn_6()">c. <span id="putBtn_6">HTML, Head, Title, Body</span></button>
+                    <button onclick="return putIn_111()">c. <span id="putBtn_23456">HTML, Head, Title, Body</span></button>
+                    </span>
+                     
+                    <span id="span_2"></span>
+                    <!--/11-->
+                    <script>
+                       function putIn_4(){
+                       var a = document.getElementById('putBtn_4').innerHTML;
+                               
+                       document.getElementById('input_2').value = a;
+                           return false;
+                       }
+                       function putIn_5(){
+                       var a = document.getElementById('putBtn_5').innerHTML;
+                               
+                       document.getElementById('input_2').value = a;
+                           return false;
+                       }
+                       function putIn_6(){
+                       var a = document.getElementById('putBtn_6').innerHTML;
+                               
+                       document.getElementById('input_2').value = a;
+                           return false;
+                       }
+                       function putIn_111(){
+                       var a = document.getElementById('putBtn_23456').innerHTML;
+                               
+                       document.getElementById('input_2').value = a;
+                           return false;
+                       }
+                    </script>
+                 </div>
+                  <!--3-->
+                 <div class="Ckaskd">
+                    <P>Which of the following element is responsible for making the text bold in HTML?</P>
+                    <label>Answer :</label>
+                    <input class="same_inputs" id="input_3">
+                    <!-- <div>
+                       <img src="img/sptn6.png" alt="">
+                    </div>
+                      -->
+                     
+                    <span><button onclick="return putIn_7()">a. <span id="putBtn_7">pre</span></button>  
+                    <button onclick="return putIn_8()">b. <span id="putBtn_8">a</span></button>  
+                    <button onclick="return putIn_9()">c. <span id="putBtn_9">b</span></button>
+                    <button onclick="return putIn_1111()">c. <span id="putBtn_34567">br</span></button>
+                    </span>
+                     
+                    <span id="span_3"></span>
+                    <!--/3-->
+                    <script>
+                       function putIn_7(){
+                       var a = document.getElementById('putBtn_7').innerHTML;
+                               
+                       document.getElementById('input_3').value = ("<" + a.substring(0,3) + ">");
+                           return false;
+                       }
+                       function putIn_8(){
+                       var a = document.getElementById('putBtn_8').innerHTML;
+                               
+                       document.getElementById('input_3').value = ("<" + a.substring(0) + ">");
+                           return false;
+                       }
+                       function putIn_9(){
+                       var a = document.getElementById('putBtn_9').innerHTML;
+                               
+                       document.getElementById('input_3').value = ("<" + a.substring(0) + ">");
+                           return false;
+                       }
+                       function putIn_1111(){
+                       var a = document.getElementById('putBtn_34567').innerHTML;
+                               
+                       document.getElementById('input_3').value = ("<" + a.substring(0,2) + ">");
+                           return false;
+                       }
+                    </script>
+                 </div>
+               </div>
+                  <!--4-->
+                 <div class="Ckaskd">
+                    <P>Which of the following tag is used to insert a line-break in HTML?</P>
+                    <label>Answer :</label>
+                    <input class="same_inputs" id="input_4">
+                    <!-- <div>
+                       <img src="img/sptn6.png" alt="">
+                    </div>
+                      -->
+                     
+                    <span><button onclick="return putIn_10()">a. <span id="putBtn_10">br</span></button>  
+                    <button onclick="return putIn_11()">b. <span id="putBtn_11">a</span></button>  
+                    <button onclick="return putIn_12()">c. <span id="putBtn_12">pre</span></button>
+                    <button onclick="return putIn_11111()">c. <span id="putBtn_45678">b</span></button>
+                    </span>
+                     
+                    <span id="span_4"></span>
+                    <!--/4-->
+                    <script>
+                       function putIn_10(){
+                       var a = document.getElementById('putBtn_10').innerHTML;
+                               
+                       document.getElementById('input_4').value = ("<" + a.substring(0,2) + ">");
+                           return false;
+                       }
+                       function putIn_11(){
+                       var a = document.getElementById('putBtn_11').innerHTML;
+                               
+                       document.getElementById('input_4').value = ("<" + a.substring(0) + ">");
+                           return false;
+                       }
+                       function putIn_12(){
+                       var a = document.getElementById('putBtn_12').innerHTML;
+                               
+                       document.getElementById('input_4').value = ("<" + a.substring(0,3) + ">");
+                           return false;
+                       }
+                       function putIn_11111(){
+                       var a = document.getElementById('putBtn_45678').innerHTML;
+                               
+                       document.getElementById('input_4').value = ("<" + a.substring(0) + ">");
+                           return false;
+                       }
+                    </script>
+                 </div>
+                  <!--5-->
+                 <div class="Ckaskd">
+                    <P> How to create a hyperlink in HTML?</P>
+                    <label>Answer :</label>
+                    <input class="same_inputs" id="input_5">
+                    <!-- <div>
+                       <img src="img/sptn6.png" alt="">
+                    </div>
+                      -->
+                     
+                    <span><button onclick="return putIn_13()">a. <span id="putBtn_13">a href = "www.javatpoint.com" javaTpoint.com</span></button>  
+                    <button onclick="return putIn_14()">b. <span id="putBtn_14">a url = "www.javatpoint.com" javaTpoint.com</span></button>  
+                    <button onclick="return putIn_15()">c. <span id="putBtn_15">a link = "www.javatpoint.com" javaTpoint.com</span></button>
+                    <button onclick="return putIn_111111()">c. <span id="putBtn_56789">www.javatpoint.com javaTpoint.com</span></button>
+                    </span>
+                     
+                    <span id="span_5"></span>
+                    <!--/5-->
+                    <script>
+                       function putIn_13(){
+                       var a = document.getElementById('putBtn_13').innerHTML;
+                               
+                       document.getElementById('input_5').value = ("<" + a.substring(0,29) + ">" + a.substring(29,44) + "</a>");
+                           return false;
+                       }
+                       function putIn_14(){
+                       var a = document.getElementById('putBtn_14').innerHTML;
+                               
+                       document.getElementById('input_5').value = ("<" + a.substring(0,45) + "</a>");
+                           return false;
+                       }
+                       function putIn_15(){
+                       var a = document.getElementById('putBtn_15').innerHTML;
+                               
+                       document.getElementById('input_5').value = ("<" + a.substring(0,29) + ">" + a.substring(29,44) + "</a>");
+                           return false;
+                       }
+                       function putIn_111111(){
+                       var a = document.getElementById('putBtn_56789').innerHTML;
+                               
+                       document.getElementById('input_5').value = ("<a>" + a.substring(0,18) + "<" + a.substring(18,33) + "/a>");
+                           return false;
+                       }
+                    </script>
+                 </div>
+                  <!--6-->
+                 <div class="Ckaskd">
+                    <P> How to create an ordered list (a list with the list items in numbers) in HTML?</P>
+                    <label>Answer :</label>
+                    <input class="same_inputs" id="input_6">
+                    <!-- <div>
+                       <img src="img/sptn6.png" alt="">
+                    </div>
+                      -->
+                     
+                    <span><button onclick="return putIn_16()">a. <span id="putBtn_16">ul</span></button>  
+                    <button onclick="return putIn_17()">b. <span id="putBtn_17">ol</span></button>  
+                    <button onclick="return putIn_18()">c. <span id="putBtn_18">li</span></button>
+                    <button onclick="return putIn_1111111()">c. <span id="putBtn_67890">i</span></button>
+                    </span>
+                     
+                    <span id="span_6"></span>
+                    <!--/6-->
+                    <script>
+                       function putIn_16(){
+                       var a = document.getElementById('putBtn_16').innerHTML;
+                               
+                       document.getElementById('input_6').value = ("<" + a.substring(0) + ">");
+                           return false;
+                       }
+                       function putIn_17(){
+                       var a = document.getElementById('putBtn_17').innerHTML;
+                               
+                       document.getElementById('input_6').value = ("<" + a.substring(0,18) + ">");
+                           return false;
+                       }
+                       function putIn_18(){
+                       var a = document.getElementById('putBtn_18').innerHTML;
+                               
+                       document.getElementById('input_6').value = ("<" + a.substring(0,18) + ">");
+                           return false;
+                       }
+                       function putIn_1111111(){
+                       var a = document.getElementById('putBtn_67890').innerHTML;
+                               
+                       document.getElementById('input_6').value = ("<" + a.substring(0,18) + ">");
+                           return false;
+                       }
+                    </script>
+                 </div>
+                  <!--7-->
+                 <div class="Ckaskd">
+                    <P> An HTML program is saved by using the ____ extension.</P>
+                    <label>Answer :</label>
+                    <input class="same_inputs" id="input_7">
+                    <!-- <div>
+                       <img src="img/sptn6.png" alt="">
+                    </div>
+                      -->
+                     
+                    <span><button onclick="return putIn_19()">a. <span id="putBtn_19">.html</span></button>  
+                    <button onclick="return putIn_20()">b. <span id="putBtn_20">.hml</span></button>  
+                    <button onclick="return putIn_21()">c. <span id="putBtn_21">.ht</span></button>
+                    <button onclick="return putIn_11111111()">c. <span id="putBtn_78911">none of these</span></button>
+                    </span>
+                     
+                    <span id="span_7"></span>
+                    <!--/7-->
+                    <script>
+                       function putIn_19(){
+                       var a = document.getElementById('putBtn_19').innerHTML;
+                               
+                       document.getElementById('input_7').value = a;
+                           return false;
+                       }
+                       function putIn_20(){
+                       var a = document.getElementById('putBtn_20').innerHTML;
+                               
+                       document.getElementById('input_7').value = a;
+                           return false;
+                       }
+                       function putIn_21(){
+                       var a = document.getElementById('putBtn_21').innerHTML;
+                               
+                       document.getElementById('input_7').value = a;
+                           return false;
+                       }
+                       function putIn_11111111(){
+                       var a = document.getElementById('putBtn_78911').innerHTML;
+                               
+                       document.getElementById('input_7').value = a;
+                           return false;
+                       }
+                    </script>
+                 </div>
+                  <!--8-->
+                 <div class="Ckaskd">
+                    <P> In HTML5, which of the following tag is used to initialize the document type?</P>
+                    <label>Answer :</label>
+                    <input class="same_inputs" id="input_8">
+                    <!-- <div>
+                       <img src="img/sptn6.png" alt="">
+                    </div>
+                      -->
+                     
+                    <span><button onclick="return putIn_22()">a. <span id="putBtn_22">Doctype HTML</span></button>  
+                    <button onclick="return putIn_23()">b. <span id="putBtn_23">\Doctype html</span></button>  
+                    <button onclick="return putIn_24()">c. <span id="putBtn_24">Doctype</span></button>
+                    <button onclick="return putIn_111111111()">c. <span id="putBtn_89111">!DOCTYPE html</span></button>
+                    </span>
+                     
+                    <span id="span_8"></span>
+                    <!--/8-->
+                    <script>
+                       function putIn_22(){
+                       var a = document.getElementById('putBtn_22').innerHTML;
+                               
+                       document.getElementById('input_8').value = ("<" + a.substring(0) + ">");
+                           return false;
+                       }
+                       function putIn_23(){
+                       var a = document.getElementById('putBtn_23').innerHTML;
+                               
+                       document.getElementById('input_8').value = ("<" + a.substring(0) + ">");
+                           return false;
+                       }
+                       function putIn_24(){
+                       var a = document.getElementById('putBtn_24').innerHTML;
+                               
+                       document.getElementById('input_8').value = ("<" + a.substring(0) + ">");
+                           return false;
+                       }
+                       function putIn_111111111(){
+                       var a = document.getElementById('putBtn_89111').innerHTML;
+                               
+                       document.getElementById('input_8').value = ("<" + a.substring(0) + ">");
+                           return false;
+                       }
+                    </script>
+                 </div>
+                  <!--9-->
+                 <div class="Ckaskd">
+                    <P> Which tag is the root element of an HTML page?</P>
+                    <label>Answer :</label>
+                    <input class="same_inputs" id="input_9">
+                    <!-- <div>
+                       <img src="img/sptn6.png" alt="">
+                    </div>
+                      -->
+                     
+                    <span><button onclick="return putIn_25()">a. <span id="putBtn_25">HTML</span></button>  
+                    <button onclick="return putIn_26()">b. <span id="putBtn_26">title</span></button>  
+                    <button onclick="return putIn_27()">c. <span id="putBtn_27">head</span></button>
+                    <button onclick="return putIn_1111111111()">c. <span id="putBtn_89112">body</span></button>
+                    </span>
+                     
+                    <span id="span_9"></span>
+                    <!--/9-->
+                    <script>
+                       function putIn_25(){
+                       var a = document.getElementById('putBtn_25').innerHTML;
+                               
+                       document.getElementById('input_9').value = ("<" + a.substring(0, 4) + ">");
+                           return false;
+                       }
+                       function putIn_26(){
+                       var a = document.getElementById('putBtn_26').innerHTML;
+                               
+                       document.getElementById('input_9').value = ("<" + a.substring(0, 5) + ">");
+                           return false;
+                       }
+                       function putIn_27(){
+                       var a = document.getElementById('putBtn_27').innerHTML;
+                               
+                       document.getElementById('input_9').value = ("<" + a.substring(0, 4) + ">");
+                           return false;
+                       }
+                       function putIn_1111111111(){
+                       var a = document.getElementById('putBtn_89112').innerHTML;
+                               
+                       document.getElementById('input_9').value = ("<" + a.substring(0, 4) + ">");
+                           return false;
+                       }
+                    </script>
+                 </div>
+                  <!--10-->
+                 <div class="Ckaskd">
+                    <P> HTML headings are defined with the _____ tags.</P>
+                    <label>Answer :</label>
+                    <input class="same_inputs" id="input_10">
+                    <!-- <div>
+                       <img src="img/sptn6.png" alt="">
+                    </div>
+                      -->
+                     
+                    <span><button onclick="return putIn_28()">a. <span id="putBtn_28">head1 to head6</span></button>  
+                    <button onclick="return putIn_29()">b. <span id="putBtn_29">p1 to p6</span></button>  
+                    <button onclick="return putIn_30()">c. <span id="putBtn_30">h1 to h6</span></button>
+                    <button onclick="return putIn_11111111111()">c. <span id="putBtn_89113">h1 to h3</span></button>
+                    </span>
+                     
+                    <span id="span_10"></span>
+                    <!--/10-->
+                    <script>
+                       function putIn_28(){
+                       var a = document.getElementById('putBtn_28').innerHTML;
+                               
+                       document.getElementById('input_10').value = ("<" + a.substring(0, 5) + ">" + " to " + "<" + a.substring(9, 15) + ">");
+                           return false;
+                       }
+                       function putIn_29(){
+                       var a = document.getElementById('putBtn_29').innerHTML;
+                               
+                       document.getElementById('input_10').value = ("<" + a.substring(0, 2) + ">" + " to " + "<" + a.substring(6, 10) + ">");
+                           return false;
+                       }
+                       function putIn_30(){
+                       var a = document.getElementById('putBtn_30').innerHTML;
+                               
+                       document.getElementById('input_10').value = ("<" + a.substring(0, 2) + ">" + " to " + "<" + a.substring(6, 10) + ">");
+                           return false;
+                       }
+                       function putIn_11111111111(){
+                       var a = document.getElementById('putBtn_89113').innerHTML;
+                               
+                       document.getElementById('input_10').value = ("<" + a.substring(0, 2) + ">" + " to " + "<" + a.substring(6, 10) + ">");
+                           return false;
+                       }
+                    </script>
+                 </div>
+               </div>
+                  <div class="sbmtArea">
+                    <input type="submit" class="submit_button" id="submit"> 
+                    <button class="result_div" id="result_div" onclick="return result()">Result</button>
+                  </div>
+         </form>
+      </div>
+   </body>
+</html>

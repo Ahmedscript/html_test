@@ -1,0 +1,102 @@
+*{
+    font-family: Arial;
+    font-size: 17px;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    font-weight: bold;
+}
+p{
+    color: white;
+}
+span{
+    color: white;
+}
+label{
+    color: white;
+}
+button{
+    background: rgba(216, 208, 208, 0.226);
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 5px;
+}
+.same_inputs{
+    width: 180px;
+    /* transition: 0.5s; */
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    border: 1px solid black;
+    background: transparent; 
+}
+.same_inputs:focus{
+    width: 220px;
+    border-radius: 0px;
+    box-shadow:inset  0px 0px 10px black;
+    text-shadow: 0px 0px 10px white;
+}
+.submit_button{
+    background: rgba(216, 208, 208, 0.226);
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px black;
+    color: white;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 0px;
+    border-radius: 10px;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image: url(aasdas.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.main_father_div{
+    height: 625px;
+    background: rgba(0, 0, 128, 0.322);
+    display: flex;
+}
+.three_child_div{
+    width: 440px;
+    height: 625px;
+    background: rgba(156, 156, 156, 0.185);
+    box-shadow: 0px 0px 10px black;
+}
+.div_2{
+    margin-left: 22px;
+}
+.div_3{
+    margin-left: 22px;
+}
+.Question_1{
+    margin-top:  50px;
+    margin-left: 90px;
+}
+.result_div{
+    background: rgba(216, 208, 208, 0.226);
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px black;
+    color: white;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    width: 150px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 0px;
+    border-radius: 10px;
+}
+.Ques_1{
+    margin-top: 30px;
+}
+.main_result_div{
+    width: 300px;
+    height: 105px;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px white;
+    background: rgb(85, 143, 79);
+    margin-left: 540px;
+    margin-top: -250px;
+    visibility: hidden;
+}
